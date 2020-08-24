@@ -22,10 +22,8 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <a class="navbar-brand" href="./">
-                    <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""
-                        loading="lazy" />
-                    Hranmash
-                </a>
+                    <img src="images/HM-logo-bulg.png" width="213" height="30" class="d-inline-block align-top" alt=""
+                        loading="lazy" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,9 +40,6 @@
                             <a class="nav-link" href="/projects">Проекти</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="/about">За нас</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Контакти</a>
                         </li>
 
@@ -70,6 +65,52 @@
     <div class="container">
         <h2 class="section-title">Свържете се с нас</h2>
     </div>
+    <!-- Contact form start -->
+    <div class="container">
+        <h3>Вашето запитване</h3>
+        <form action="contact.php" method="post">
+            <input type="text" name="email_title" id="email_title" placeholder="Относно *" required
+                pattern=[A-Za-z0-9\sА-Яа-я]{8,60}
+                oninvalid="this.setCustomValidity('Моля въведете заглавие на съобщението, от 8 до 60 символа.')"
+                oninput="this.setCustomValidity('')">
+            <textarea id="message" name="visitor_message" placeholder="Съобщение *" required
+                oninvalid="this.setCustomValidity('Моля въведете текста на съобщението.')"
+                oninput="this.setCustomValidity('')"></textarea>
+            <h3>Лични данни</h3>
+            <select id="salutation" name="salutation" required
+                oninvalid="this.setCustomValidity('Моля изберете опция от менюто.')">
+                <option value="">Обръщение</option>
+                <option value="mr">Г-н</option>
+                <option value="mrs">Г-жа</option>
+            </select>
+            <input type="text" id="firstName" name="firstName" placeholder="Име *" pattern=[A-Z\sa-zА-Яа-я]{3,20}
+                required oninvalid="this.setCustomValidity('Моля въведете името си, от 3 до 20 символа.')"
+                oninput="this.setCustomValidity('')">
+            <input type="text" id="lastName" name="lastName" placeholder="Фамилия *" pattern=[A-Z\sa-zА-Яа-я]{3,20}
+                required oninvalid="this.setCustomValidity('Моля въведете фамилията си, от 3 до 20 символа.')"
+                oninput="this.setCustomValidity('')">
+            <input type="text" id="position" name="position" placeholder="Длъжност">
+            <input type="text" id="company" name="company" placeholder="Фирма">
+            <input type="text" id="division" name="division" placeholder="Отдел">
+            <input type="text" id="country" name="country" placeholder="Държава">
+            <input type="tel" id="phone" name="phone" placeholder="Телефон">
+            <input type="tel" id="mobilePhone" name="mobilePhone" placeholder="Мобилен телефон">
+            <input type="email" id="email" name="email" placeholder="E-mail *"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+                oninvalid="this.setCustomValidity('Моля въведете своя e-mail адрес.')"
+                oninput="this.setCustomValidity('')">
+            <div class="consent"><input type="checkbox" name="personalData" id="personalData" required
+                    oninvalid="this.setCustomValidity('Моля отбележете това поле, за да продължите.')"
+                    onclick="this.setCustomValidity('')">
+                <label for="personalData">Приемам обработката на личните ми данни за целите на отговор на запитването ми
+                    съгласно <a href="#">Политиката за лични данни</a>.</label>
+            </div>
+            <button class="btn btn-primary btn-lg" type="submit">Изпрати</button>
+        </form>
+    </div>
+
+
+    <!-- Contact form end -->
 
     <!-- Footer start -->
     <footer class="footer">
