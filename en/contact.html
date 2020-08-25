@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hranmash</title>
+    <title>HRANMASH | Contact Us</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
@@ -15,6 +15,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="/styles/style.css" />
+    <script src="/scripts/components-en.js" defer></script>
 </head>
 
 <body>
@@ -23,9 +24,9 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <a class="navbar-brand" href="./">
-                    <img src="/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""
+                    <img src="/images/HM-logo-engl.png" width="213" height="30" class="d-inline-block align-top" alt=""
                         loading="lazy" />
-                    Hranmash
+
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +35,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="./">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./products">Products</a>
@@ -43,7 +44,7 @@
                             <a class="nav-link" href="./projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Contact</a>
+                            <a class="nav-link active" href="#">Contact<span class="sr-only">(current)</span></a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -73,29 +74,59 @@
         <h1 class="section-title">Contact us</h1>
 
     </div>
+
+    <!-- Contact form start -->
+    <div class="container">
+        <h3>Your message</h3>
+        <form action="contact.php" method="post">
+            <input type="text" name="email_title" id="email_title" placeholder="Subject *" required
+                pattern=[A-Za-z0-9\sА-Яа-я]{8,60}
+                oninvalid="this.setCustomValidity('Please enter a message title, 8 - 60 characters.')"
+                oninput="this.setCustomValidity('')">
+            <textarea id="message" name="visitor_message" placeholder="Message *" required
+                oninvalid="this.setCustomValidity('Please enter the text of the message.')"
+                oninput="this.setCustomValidity('')"></textarea>
+            <h3>Personal details</h3>
+            <select id="salutation" name="salutation" required
+                oninvalid="this.setCustomValidity('Please select an option from the menu.')">
+                <option value="">Salutation</option>
+                <option value="mr">Mr.</option>
+                <option value="mrs">Mrs.</option>
+            </select>
+            <input type="text" id="firstName" name="firstName" placeholder="First name *" pattern=[A-Z\sa-zА-Яа-я]{3,20}
+                required oninvalid="this.setCustomValidity('Please enter your first name, 3 - 20 characters.')"
+                oninput="this.setCustomValidity('')">
+            <input type="text" id="lastName" name="lastName" placeholder="Last name *" pattern=[A-Z\sa-zА-Яа-я]{3,20}
+                required oninvalid="this.setCustomValidity('Please enter your last name, 3 - 20 characters.')"
+                oninput="this.setCustomValidity('')">
+            <input type="text" id="position" name="position" placeholder="Job title">
+            <input type="text" id="company" name="company" placeholder="Company">
+            <input type="text" id="division" name="division" placeholder="Department">
+            <input type="text" id="country" name="country" placeholder="Country">
+            <input type="tel" id="phone" name="phone" placeholder="Phone">
+            <input type="tel" id="mobilePhone" name="mobilePhone" placeholder="Mobile phone">
+            <input type="email" id="email" name="email" placeholder="E-mail *"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+                oninvalid="this.setCustomValidity('Please enter your e-mail address.')"
+                oninput="this.setCustomValidity('')">
+            <div class="consent"><input type="checkbox" name="personalData" id="personalData" required
+                    oninvalid="this.setCustomValidity('Please select this field to continue.')"
+                    onclick="this.setCustomValidity('')">
+                <label for="personalData">I accept the processing of my personal data for the purposes of answering my
+                    request according to the <a href="#">Personal data policy</a>.</label>
+            </div>
+            <button class="btn btn-primary btn-lg" type="submit">Send</button>
+        </form>
+    </div>
+
+
+    <!-- Contact form end -->
     <!-- main content end -->
 
     <!-- Footer start -->
-    <footer class="footer">
-        <div class="container-fluid bg-light footer-info" style="border-top: 1px solid rgba(0,0,0,.1);">
-            <div class="row justify-content-end">
-                <div class="col-lg-4 col-md-4 col-xs-12 text-secondary">
-                    <h6>Hranmash</h6>
-                    <p>No. 8, Nikola Kozlev Str.</p>
-                    <p>Sofia 1421, Bulgaria</p>
-                    <p><a href="mailto:info@hranmash-bg.com">info[at]hranmash-bg.com</a></p>
-                    <p>Phone: + (359 2) 85 111 52</p>
-                    <p>Fax: + (359 2) 85 111 62</p>
-                </div>
-                <div class="col-lg-3 col-md-3 col-xs-12 text-secondary">
+    <div id="footer"></div>
+    <!-- Footer end -->
 
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid bg-primary belt">
-            Hranmash 2020
-        </div>
-    </footer>
 </body>
 
 </html>

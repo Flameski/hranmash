@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hranmash</title>
+    <title>ХРАНМАШ | Начало</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
@@ -15,6 +15,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="/styles/style.css" />
+    <script src="/scripts/components.js" defer></script>
 </head>
 
 <body>
@@ -23,10 +24,8 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <a class="navbar-brand" href="./">
-                    <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""
-                        loading="lazy" />
-                    Hranmash
-                </a>
+                    <img src="images/HM-logo-bulg.png" width="213" height="30" class="d-inline-block align-top" alt=""
+                        loading="lazy" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -66,7 +65,48 @@
     </div>
     <!-- Navbar end -->
     <!-- Caroussel start -->
-    <div class="container-fluid parallax-super"></div>
+    <div id="main-caroussel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#main-caroussel" data-slide-to="0" class="active"></li>
+            <li data-target="#main-caroussel" data-slide-to="1"></li>
+            <li data-target="#main-caroussel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/slide-1.png" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Опит</h5>
+                    <p>Нашият дългогодишен опит ни позволява да достигнем и да споделим редица ценни предложения и схеми
+                        за оптимизиране и подобряване на работата на съоръженията.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/slide-2.png" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Екип</h5>
+                    <p>ХРАНМАШ е в позиция да формира и работи със собствени комплектни проектни екипи или да формира
+                        специални проектни екипи и/или управление за нуждите на отделни проекти и/или единични задачи
+                        съвместно с местни консултантски и инжинерингови организации и/или подизпълнители.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/slide-3.png" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Гъвкавост</h5>
+                    <p>ХРАНМАШ практически е без ограничения в следването и приспособяването си към вижданията и
+                        предпочитанията на клиента.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#main-caroussel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Предишна</span>
+        </a>
+        <a class="carousel-control-next" href="#main-caroussel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следваща</span>
+        </a>
+    </div>
     <!-- Caroussel end -->
     <div class="container intro">
         <p>ХРАНМАШ е напълно независима инжeнерингова група съставена от машинни, електро-електронни, програмни и
@@ -77,35 +117,57 @@
         </p>
         <p>При необходимост и/или по искане на клиента ХРАНМАШ е организиран така, че да включи и приложи други
             допълнителни структури необходими за проекта, като:</p>
+    </div>
+    <div class="container intro2">
+        <h2 class="section-title">Индустриални услуги</h2>
         <div class="card-deck">
-            <div class="card">
-                <img src="/images/box-2.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Строителни структурни решения</h5>
-                </div>
-            </div>
             <div class="card">
                 <img src="/images/box-1.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Програмно осигуряване</h5>
+                    <h5 class="card-title">Оценка и оптимизация</h5>
+                    <p class="card-text">Като независима организация ХРАНМАШ е използвана, изпълнявала е разнообразни
+                        полеви одитни задачи, оптимизационни модели и проектни предложения за подобряване и повишаване
+                        на ефективността от операциите.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/products" class="card-link">Вижте повече за нашите продукти</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/images/box-2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Изграждане и поддръжка</h5>
+                    <p class="card-text">Разширените ни връзка и обмен на опит с производители от свързаните индустрии,
+                        базирани на пълната ни независимост при обсъждане и приемане на решенията, ни позволяват те да
+                        се формират в интерес на най-подходящия избор за клиента.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/projects" class="card-link">Вижте нашите завършени проекти</a>
                 </div>
             </div>
             <div class="card">
                 <img src="/images/box-3.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">ОВиК</h5>
+                    <h5 class="card-title">Инженерни решения</h5>
+                    <p class="card-text">Ние никога не бихме се поколебали надлежно да информираме клиента за вижданията
+                        и разбирането си по отношение на спесифичните изисквания на конкретната задача, но въпреки това
+                        за нас неизбежно задължително е универсалното ни разбиране да се придържаме в крайна сметка
+                        изцяло към предпочитанията и решенията на клиента.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/contact" class="card-link">Свържете се с нас</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Parallax start -->
-    <!-- <div class="container parallax-main">
+    <div class="container parallax-main">
 
-    </div> -->
+    </div>
     <!-- Parallax end -->
     <!-- Activities start -->
-    <!-- <div class="container activities">
-        
+    <div class="container activities">
+
         <div class="row">
             <div class="col-xs-12 col-md-3 mb-3">
                 <div class="card text-center bg-light">
@@ -196,59 +258,17 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Activities end -->
     <hr>
-    <div class="container features">
-        <div class="row">
-            <div class="col-6 col-lg-3">
-                <h3>10</h3>
-                <p>държави, в които оперираме</p>
-            </div>
-            <div class="col-6 col-lg-3">
-                <h3>50+</h3>
-                <p>успешно реализирани проекти</p>
-            </div>
-            <div class="col-6 col-lg-3">
-                <h3>30+</h3>
-                <p>международни партньори</p>
-            </div>
-            <div class="col-6 col-lg-3">
-                <h3>23</h3>
-                <p>години опит в индустрията</p>
-            </div>
-        </div>
+    <div class="container">
+        <h5 class="bottom-text">Ние с удоволствие сме разположение да предоставим при поискване всякаква необходима
+            допълнителна информация и услуги, както и визуализиране и примерна проектна информация за успешно
+            изпълнените от ХРАНМАШ проекти и единчни задачи.</h5>
     </div>
     <!-- Footer start -->
-    <footer class="footer">
-        <div class="container-fluid bg-light footer-info" style="border-top: 1px solid rgba(0,0,0,.1);">
-            <div class="row justify-content-end">
-                <div class="col-lg-4 col-md-4 col-xs-12 text-secondary">
-                    <h6>Hranmash</h6>
-                    <p>ул. Никола Козлев №8</p>
-                    <p>София 1421, България</p>
-                    <p><a href="mailto:info@hranmash-bg.com">info[at]hranmash-bg.com</a></p>
-                    <p>Phone: + (359 2) 85 111 52</p>
-                    <p>Fax: + (359 2) 85 111 62</p>
-                </div>
-                <div class="col-lg-3 col-md-3 col-xs-12 text-secondary">
-
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid bg-primary belt">
-            Hranmash 2020
-        </div>
-    </footer>
+    <div id="footer"></div>
     <!-- Footer end -->
 </body>
-
-<!--<body style="background-image: url(/images/industry-1140760_1920.jpg);">
-
-    <h1
-        style="color: white; font-size: 3rem; font-weight: bold;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-        Coming soon</h1>
-
-</body>-->
 
 </html>

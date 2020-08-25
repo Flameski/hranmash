@@ -34,8 +34,14 @@
   background-color: black;
   margin: auto;
   padding: 0;
-  width: 100%;
   max-width: 1100px;
+  max-height: 900px;
+}
+
+.modal-content img {
+  max-height: 900px;
+  display: block;
+  margin: auto;
 }
 
 /* The Close Button */
@@ -102,14 +108,20 @@
   top: 0;
 }
 
-img.demo {
+img.equipment-img,
+img.machines-img,
+img.projects-img,
+img.diagram-img {
   opacity: 0.6;
   width: 74px;
   display: inline-block;
 }
 
 .active,
-.demo:hover {
+.equipment-img:hover,
+.machines-img:hover,
+.projects-img:hover,
+.diagram-img:hover {
   opacity: 1;
 }
 
