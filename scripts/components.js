@@ -8,16 +8,15 @@ let footer = `<footer class="footer">
             <p>ул. Никола Козлев №8</p>
             <p>София 1421, България</p>
             <p><a href="mailto:info@hranmash-bg.com">info[at]hranmash-bg.com</a></p>
-            <p>Телефон: + (359 2) 85 111 52</p>
-            <p>Факс: + (359 2) 85 111 62</p>
         </div>
         <div class="col-lg-3 col-md-3 col-xs-12 text-secondary">
-
+            <h5>Бързи връзки</h5>
+            <p><a href="/privacy-policy">Политика за защита на личните данни</a></p>
         </div>
     </div>
 </div>
 <div class="container-fluid bg-primary belt">
-    HRANMASH 2020
+    HRANMASH 2020 | Всички права запазени | Дизайн от PDD
 </div>
 </footer>`;
 
