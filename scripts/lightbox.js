@@ -1,186 +1,88 @@
-// Open the Modal
-function openEqModal() {
-    document.getElementById("equipment-modal").style.display = "block";
+//jshint esversion:6
+
+let imgType = "";
+var thumbnailNum = 0;
+
+for (let el of document.querySelectorAll('.img-fluid')) {
+    el.addEventListener('click', openModal);
 }
 
-// Close the Modal
-function closeEqModal() {
-    document.getElementById("equipment-modal").style.display = "none";
-}
+function openModal() {
+    let currImg = this.src.toString();
+    currImgNum = currImg.charAt(currImg.length - 5);
 
-let eqSlideIndex = 1;
-showEqSlides(eqSlideIndex);
-
-// Next/previous controls
-function plusEqSlides(n) {
-    showEqSlides(eqSlideIndex += n);
-}
-
-// Thumbnail image controls
-function currentEqSlide(n) {
-    showEqSlides(eqSlideIndex = n);
-}
-
-function showEqSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("equipment-slide");
-    let dots = document.getElementsByClassName("equipment-img");
-    if (n > slides.length) {
-        eqSlideIndex = 1;
+    if (this.classList.contains('equipment')) {
+        imgType = 'equipment';
+    } else if (this.classList.contains('machines')) {
+        imgType = 'machines';
+    } else if (this.classList.contains('projects')) {
+        imgType = 'projects';
+    } else if (this.classList.contains('diagram')) {
+        imgType = 'diagram';
     }
-    if (n < 1) {
-        eqSlideIndex = slides.length;
+
+    let thumbnailsDiv = document.querySelector('.thumbnails');
+    let thumbnail = '';
+
+    switch (imgType) {
+        case 'equipment':
+        case 'machines':
+            thumbnailNum = 14;
+            break;
+        case 'projects':
+            thumbnailNum = 8;
+            break;
+        case 'diagram':
+            thumbnailNum = 5;
+            break;
+        default:
+            break;
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    for (let i = 1; i <= thumbnailNum; i++) {
+        thumbnail += `<img class="thumb-img" src="/images/${imgType}-${i}.jpg">`;
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    thumbnailsDiv.innerHTML = thumbnail;
+
+    document.querySelector('.modal').style.display = "block";
+    displayBigImg();
+
+
+    for (let el of document.querySelectorAll('.thumb-img')) {
+        el.addEventListener('click', function () {
+            currImg = this.src.toString();
+            currImgNum = currImg.charAt(currImg.length - 5);
+            currImgNum = Number(currImgNum);
+            currImgNum2 = currImg.charAt(currImg.length - 6);
+            if (isNaN(currImgNum2)) {
+                bigImg = `/images/${imgType}-${currImgNum}.jpg`;
+            } else {
+                bigImg = `/images/${imgType}-${currImgNum + 10}.jpg`;
+            }
+            document.querySelector('#modal-img').src = bigImg;
+        });
     }
-    slides[eqSlideIndex - 1].style.display = "block";
-    dots[eqSlideIndex - 1].className += " active";
 }
 
-/* Machines */
-
-// Open the Modal
-function openMaModal() {
-    document.getElementById("machines-modal").style.display = "block";
+function displayBigImg() {
+    let bigImg = `/images/${imgType}-${currImgNum}.jpg`;
+    document.querySelector('#modal-img').src = bigImg;
 }
 
-// Close the Modal
-function closeMaModal() {
-    document.getElementById("machines-modal").style.display = "none";
-}
-
-let maSlideIndex = 1;
-showMaSlides(maSlideIndex);
-
-// Next/previous controls
-function plusMaSlides(n) {
-    showMaSlides(maSlideIndex += n);
-}
-
-// Thumbnail image controls
-function currentMaSlide(n) {
-    showMaSlides(maSlideIndex = n);
-}
-
-function showMaSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("machines-slide");
-    let dots = document.getElementsByClassName("machines-img");
-    if (n > slides.length) {
-        maSlideIndex = 1;
+function plusSlide(num) {
+    if (num > 0) {
+        currImgNum++;
+    } else {
+        currImgNum--;
     }
-    if (n < 1) {
-        maSlideIndex = slides.length;
+    if (currImgNum < 1) {
+        currImgNum = thumbnailNum;
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    if (currImgNum > thumbnailNum) {
+        currImgNum = 1;
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[maSlideIndex - 1].style.display = "block";
-    dots[maSlideIndex - 1].className += " active";
+    displayBigImg();
 }
 
-/* Projects */
-
-// Open the Modal
-function openPrModal() {
-    document.getElementById("projects-modal").style.display = "block";
+function closeModal() {
+    document.querySelector('.modal').style.display = "none";
 }
-
-// Close the Modal
-function closePrModal() {
-    document.getElementById("projects-modal").style.display = "none";
-}
-
-let prSlideIndex = 1;
-showPrSlides(prSlideIndex);
-
-// Next/previous controls
-function plusPrSlides(n) {
-    showPrSlides(prSlideIndex += n);
-}
-
-// Thumbnail image controls
-function currentPrSlide(n) {
-    showPrSlides(prSlideIndex = n);
-}
-
-function showPrSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("projects-slide");
-    let dots = document.getElementsByClassName("projects-img");
-    if (n > slides.length) {
-        prSlideIndex = 1;
-    }
-    if (n < 1) {
-        prSlideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[prSlideIndex - 1].style.display = "block";
-    dots[prSlideIndex - 1].className += " active";
-}
-
-/* Diagrams */
-
-// Open the Modal
-function openDgModal() {
-    document.getElementById("diagram-modal").style.display = "block";
-}
-
-// Close the Modal
-function closeDgModal() {
-    document.getElementById("diagram-modal").style.display = "none";
-}
-
-let dgSlideIndex = 1;
-showDgSlides(dgSlideIndex);
-
-// Next/previous controls
-function plusDgSlides(n) {
-    showDgSlides(dgSlideIndex += n);
-}
-
-// Thumbnail image controls
-function currentDgSlide(n) {
-    showDgSlides(dgSlideIndex = n);
-}
-
-function showDgSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("diagram-slide");
-    let dots = document.getElementsByClassName("diagram-img");
-    if (n > slides.length) {
-        dgSlideIndex = 1;
-    }
-    if (n < 1) {
-        dgSlideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[dgSlideIndex - 1].style.display = "block";
-    dots[dgSlideIndex - 1].className += " active";
-}
-
-window.addEventListener('keydown', event => {
-    if (event.keyCode == 27) {
-        closeEqModal();
-        closeMaModal();
-        closePrModal();
-        closeDgModal();
-    }
-});

@@ -71,7 +71,7 @@
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 25vw;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -106,13 +106,11 @@
 }
 
 
-img.equipment-img,
-img.machines-img,
-img.projects-img,
-img.diagram-img {
+img.thumb-img {
     opacity: 0.6;
     width: 74px;
     display: inline-block;
+    margin: 0 2px;
 }
 
 .active,

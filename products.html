@@ -72,8 +72,8 @@
     <!-- Main content start -->
     <div class="container">
         <h1 class="section-title">Продукти и услуги</h1>
-        <p>ХРАНМАШ предоставя услугите си чрез дейности обобщени в три основни системни комплекса – в комплект,
-            поотделно и/или в комбинация на отделни поднива в зависимост от нуждите и изискванията на всяка една
+        <p>ХРАНМАШ предоставя услугите си чрез систематизирани три основни комплекса от дейности – в комплект,
+            поотделно и/или в комбинация на отделни поднива, в зависимост от нуждите и изискванията на всяка една
             конкретна ситуация и задача.</p>
         <div class="table-responsive">
             <table class="table table-hover">
@@ -98,108 +98,32 @@
                     <tr>
                         <td>Проектна комплексна оценка</td>
                         <td>Ремонт и поддръжка на съоръженията</td>
-                        <td>Преместване и пре-конфигуриране на производствени линии и съпътсващи инфраструктурни
+                        <td>Преместване и пре-конфигуриране на производствени линии и съпътстващи инфраструктурни
                             съоръжения</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="row" style="padding-bottom: 1rem;">
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/equipment-1.jpg" onclick="openEqModal();currentEqSlide(1)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/equipment-2.jpg" onclick="openEqModal();currentEqSlide(2)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/equipment-3.jpg" onclick="openEqModal();currentEqSlide(3)" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow equipment"
+                    src="/images/equipment-1.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow equipment"
+                    src="/images/equipment-2.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow equipment"
+                    src="/images/equipment-3.jpg" alt=""></div>
         </div>
 
         <!-- The Modal/Lightbox -->
         <div id="equipment-modal" class="modal">
-            <span class="close cursor" onclick="closeEqModal()">&times;</span>
+            <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-1.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-2.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-3.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-4.jpg" style="width:100%">
-                </div>
-                <div class="equipment-slide">
-                    <img src="/images/equipment-5.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-6.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-7.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-8.jpg" style="width:100%">
-                </div>
-                <div class="equipment-slide">
-                    <img src="/images/equipment-9.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-10.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-11.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-12.jpg" style="width:100%">
-                </div>
-                <div class="equipment-slide">
-                    <img src="/images/equipment-13.jpg" style="width:100%">
-                </div>
-
-                <div class="equipment-slide">
-                    <img src="/images/equipment-14.jpg" style="width:100%">
-                </div>
-
+                <div><img id="modal-img" src="#" style="width: 100%;object-fit: contain;"></div>
                 <!-- Next/previous controls -->
-                <a class="prev" onclick="plusEqSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusEqSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlide(1)">&#10095;</a>
 
                 <!-- Thumbnail image controls -->
                 <div class="thumbnails">
-                    <img class="equipment-img" src="/images/equipment-1.jpg" onclick="currentEqSlide(1)">
-
-                    <img class="equipment-img" src="/images/equipment-2.jpg" onclick="currentEqSlide(2)">
-
-                    <img class="equipment-img" src="/images/equipment-3.jpg" onclick="currentEqSlide(3)">
-
-                    <img class="equipment-img" src="/images/equipment-4.jpg" onclick="currentEqSlide(4)">
-                    <img class="equipment-img" src="/images/equipment-5.jpg" onclick="currentEqSlide(5)">
-
-                    <img class="equipment-img" src="/images/equipment-6.jpg" onclick="currentEqSlide(6)">
-
-                    <img class="equipment-img" src="/images/equipment-7.jpg" onclick="currentEqSlide(7)">
-                    <img class="equipment-img" src="/images/equipment-8.jpg" onclick="currentEqSlide(8)">
-                    <img class="equipment-img" src="/images/equipment-9.jpg" onclick="currentEqSlide(9)">
-
-                    <img class="equipment-img" src="/images/equipment-10.jpg" onclick="currentEqSlide(10)">
-
-                    <img class="equipment-img" src="/images/equipment-11.jpg" onclick="currentEqSlide(11)">
-
-                    <img class="equipment-img" src="/images/equipment-12.jpg" onclick="currentEqSlide(12)">
-                    <img class="equipment-img" src="/images/equipment-13.jpg" onclick="currentEqSlide(13)">
-
-                    <img class="equipment-img" src="/images/equipment-14.jpg" onclick="currentEqSlide(14)">
                 </div>
             </div>
         </div>
@@ -208,8 +132,8 @@
             единични и/или комплектни допълнителнo необходими съпътстващи съоръжения (PD), като:</p>
         <ul>
             <li>транспортни системи – въз основа на всички търговско налични утвърдени от индустрията компоненти;</li>
-            <li>резервоари и фитинги – съгласно утвърдени от Клиента спецификации;</li>
-            <li>процесни съоръжения – съгласно утвърдени от Клиента спецификации.</li>
+            <li>резервоари и фитинги – съгласно утвърдени от клиента спецификации;</li>
+            <li>процесни съоръжения – съгласно утвърдени от клиента спецификации.</li>
         </ul>
         <p>Като независима организация ХРАНМАШ изпълнява разнообразни полеви одитни задачи, оптимизационни модели и
             проектни предложения за подобряване и повишаване на ефективността от операциите.</p>
@@ -217,244 +141,51 @@
 
 
         <div class="row" style="padding-bottom: 1rem;">
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/machines-1.jpg" onclick="openMaModal();currentMaSlide(1)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/machines-2.jpg" onclick="openMaModal();currentMaSlide(2)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/machines-3.jpg" onclick="openMaModal();currentMaSlide(3)" alt=""></div>
-        </div>
-
-        <!-- The Modal/Lightbox -->
-        <div id="machines-modal" class="modal">
-            <span class="close cursor" onclick="closeMaModal()">&times;</span>
-            <div class="modal-content">
-
-                <div class="machines-slide">
-                    <img src="/images/machines-1.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-2.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-3.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-4.jpg" style="width:100%">
-                </div>
-                <div class="machines-slide">
-                    <img src="/images/machines-5.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-6.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-7.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-8.jpg" style="width:100%">
-                </div>
-                <div class="machines-slide">
-                    <img src="/images/machines-9.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-10.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-11.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-12.jpg" style="width:100%">
-                </div>
-                <div class="machines-slide">
-                    <img src="/images/machines-13.jpg" style="width:100%">
-                </div>
-
-                <div class="machines-slide">
-                    <img src="/images/machines-14.jpg" style="width:100%">
-                </div>
-
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusMaSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusMaSlides(1)">&#10095;</a>
-
-                <!-- Thumbnail image controls -->
-                <div class="thumbnails">
-                    <img class="machines-img" src="/images/machines-1.jpg" onclick="currentMaSlide(1)">
-
-                    <img class="machines-img" src="/images/machines-2.jpg" onclick="currentMaSlide(2)">
-
-                    <img class="machines-img" src="/images/machines-3.jpg" onclick="currentMaSlide(3)">
-
-                    <img class="machines-img" src="/images/machines-4.jpg" onclick="currentMaSlide(4)">
-                    <img class="machines-img" src="/images/machines-5.jpg" onclick="currentMaSlide(5)">
-
-                    <img class="machines-img" src="/images/machines-6.jpg" onclick="currentMaSlide(6)">
-
-                    <img class="machines-img" src="/images/machines-7.jpg" onclick="currentMaSlide(7)">
-                    <img class="machines-img" src="/images/machines-8.jpg" onclick="currentMaSlide(8)">
-                    <img class="machines-img" src="/images/machines-9.jpg" onclick="currentMaSlide(9)">
-
-                    <img class="machines-img" src="/images/machines-10.jpg" onclick="currentMaSlide(10)">
-
-                    <img class="machines-img" src="/images/machines-11.jpg" onclick="currentMaSlide(11)">
-
-                    <img class="machines-img" src="/images/machines-12.jpg" onclick="currentMaSlide(12)">
-                    <img class="machines-img" src="/images/machines-13.jpg" onclick="currentMaSlide(13)">
-
-                    <img class="machines-img" src="/images/machines-14.jpg" onclick="currentMaSlide(14)">
-                </div>
-            </div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow machines"
+                    src="/images/machines-1.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow machines"
+                    src="/images/machines-2.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow machines"
+                    src="/images/machines-3.jpg" alt=""></div>
         </div>
 
         <p>Нашият дългогодишен опит ни позволява да достигнем и да споделим редица ценни предложения и схеми за
             оптимизиране и подобряване на работата на съоръженията.</p>
         <p>ХРАНМАШ е в позиция да формира и работи със собствени комплектни проектни екипи или да формира специални
             проектни екипи и/или управление за нуждите на отделни проекти и/или единични задачи съвместно с местни
-            консултантски и инженерингови организации и/или подизпълнители като по този начин е достатъчно гъвкава да
-            предоставя необходимите услуги съобразно нуждите и намеренията на Клиента и изискванията на конкретната
+            консултантски и инженерингови организации и/или подизпълнители, като по този начин е достатъчно гъвкава да
+            предоставя необходимите услуги съобразно нуждите и намеренията на клиента и изискванията на конкретната
             задача.</p>
-
         <p>Разширените ни връзка и обмен на опит с производители от свързаните индустрии, базирани на пълната ни
-            независимост при обсъждане и приемане на решенията, ни позволяват те да се формират в интерес на
+            независимост при обсъждане и приемане на решенията, ни позволяват окончателните решения да се формират в
+            интерес на
             най-подходящия избор за клиента.</p>
 
         <div class="row" style="padding-bottom: 1rem;">
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/projects-1.jpg" onclick="openPrModal();currentPrSlide(1)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/projects-2.jpg" onclick="openPrModal();currentPrSlide(2)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/projects-3.jpg" onclick="openPrModal();currentPrSlide(3)" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow projects"
+                    src="/images/projects-1.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow projects"
+                    src="/images/projects-2.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow projects"
+                    src="/images/projects-3.jpg" alt=""></div>
         </div>
-
-        <!-- The Modal/Lightbox -->
-        <div id="projects-modal" class="modal">
-            <span class="close cursor" onclick="closePrModal()">&times;</span>
-            <div class="modal-content">
-
-                <div class="projects-slide">
-                    <img src="/images/projects-1.jpg" style="width:100%">
-                </div>
-
-                <div class="projects-slide">
-                    <img src="/images/projects-2.jpg" style="width:100%">
-                </div>
-
-                <div class="projects-slide">
-                    <img src="/images/projects-3.jpg" style="width:100%">
-                </div>
-
-                <div class="projects-slide">
-                    <img src="/images/projects-4.jpg">
-                </div>
-                <div class="projects-slide">
-                    <img src="/images/projects-5.jpg" style="width:100%">
-                </div>
-
-                <div class="projects-slide">
-                    <img src="/images/projects-6.jpg">
-                </div>
-
-                <div class="projects-slide">
-                    <img src="/images/projects-7.jpg" style="width:100%">
-                </div>
-
-                <div class="projects-slide">
-                    <img src="/images/projects-8.jpg" style="width:100%">
-                </div>
-
-
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusPrSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusPrSlides(1)">&#10095;</a>
-
-                <!-- Thumbnail image controls -->
-                <div class="thumbnails">
-                    <img class="projects-img" src="/images/projects-1.jpg" onclick="currentPrSlide(1)">
-
-                    <img class="projects-img" src="/images/projects-2.jpg" onclick="currentPrSlide(2)">
-
-                    <img class="projects-img" src="/images/projects-3.jpg" onclick="currentPrSlide(3)">
-
-                    <img class="projects-img" src="/images/projects-4.jpg" onclick="currentPrSlide(4)">
-                    <img class="projects-img" src="/images/projects-5.jpg" onclick="currentPrSlide(5)">
-
-                    <img class="projects-img" src="/images/projects-6.jpg" onclick="currentPrSlide(6)">
-
-                    <img class="projects-img" src="/images/projects-7.jpg" onclick="currentPrSlide(7)">
-                    <img class="projects-img" src="/images/projects-8.jpg" onclick="currentPrSlide(8)">
-                </div>
-            </div>
-        </div>
-        <p>Предвид горното, въз основа обхвата и дълбочината на придобития през годините опит, както и благодарение на
-            гъвкавостта при изпълнението на задачите ХРАНМАШ практически е без ограничения в следването и
+        <p>Предвид на горното, въз основа обхвата и дълбочината на придобития през годините опит, както и благодарение
+            на
+            гъвкавостта при изпълнението на задачите, ХРАНМАШ практически е без ограничения в следването и
             приспособяването си към вижданията и предпочитанията на клиента.</p>
         <p>Ние никога не бихме се поколебали надлежно да информираме клиента за вижданията и разбирането си по отношение
             на специфичните изисквания на конкретната задача, но въпреки това за нас неизбежно задължително е
-            универсалното ни разбиране да се придържаме в крайна сметка изцяло към предпочитанията и решенията на
+            универсалното ни разбиране да се придържаме изцяло към предпочитанията и решенията на
             клиента.</p>
         <p>Нашата крайна цел е да облекчим и подпомогнем решенията на клиента, да оптимизираме, където е възможно
             изпълнението, което да доведе до икономия на капитал и свързаните разходи.</p>
         <div class="row" style="padding-bottom: 1rem;">
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/diagram-1.jpg" onclick="openDgModal();currentDgSlide(1)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/diagram-2.jpg" onclick="openDgModal();currentDgSlide(2)" alt=""></div>
-            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow"
-                    src="/images/diagram-3.jpg" onclick="openDgModal();currentDgSlide(3)" alt=""></div>
-        </div>
-
-        <!-- The Modal/Lightbox -->
-        <div id="diagram-modal" class="modal">
-            <span class="close cursor" onclick="closeDgModal()">&times;</span>
-            <div class="modal-content">
-
-                <div class="diagram-slide">
-                    <img src="/images/diagram-1.jpg" style="width:100%">
-                </div>
-
-                <div class="diagram-slide">
-                    <img src="/images/diagram-2.jpg" style="width:100%">
-                </div>
-
-                <div class="diagram-slide">
-                    <img src="/images/diagram-3.jpg" style="width:100%">
-                </div>
-
-                <div class="diagram-slide">
-                    <img src="/images/diagram-4.jpg" style="width:100%">
-                </div>
-                <div class="diagram-slide">
-                    <img src="/images/diagram-5.jpg" style="width:100%">
-                </div>
-
-
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusDgSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusDgSlides(1)">&#10095;</a>
-
-                <!-- Thumbnail image controls -->
-                <div class="thumbnails">
-                    <img class="diagram-img" src="/images/diagram-1.jpg" onclick="currentDgSlide(1)">
-
-                    <img class="diagram-img" src="/images/diagram-2.jpg" onclick="currentDgSlide(2)">
-
-                    <img class="diagram-img" src="/images/diagram-3.jpg" onclick="currentDgSlide(3)">
-
-                    <img class="diagram-img" src="/images/diagram-4.jpg" onclick="currentDgSlide(4)">
-                    <img class="diagram-img" src="/images/diagram-5.jpg" onclick="currentDgSlide(5)">
-                </div>
-            </div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow diagram"
+                    src="/images/diagram-1.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow diagram"
+                    src="/images/diagram-2.jpg" alt=""></div>
+            <div class="col-xl-4 col-md-4 col-12 mb-3"><img class="lightbox img-fluid hover-shadow diagram"
+                    src="/images/diagram-3.jpg" alt=""></div>
         </div>
     </div>
     <!-- Main content end -->
