@@ -170,4 +170,13 @@ form label a {
 .carousel-caption {
   background-color: rgba(153, 153, 153, 0.45);
 }
+
+.navcontainer {
+  z-index: 2;
+}
+
+.navbar {
+  -webkit-transition: height 0.5s !important;
+  transition: height 0.5s !important;
+}
 /*# sourceMappingURL=style.css.map */

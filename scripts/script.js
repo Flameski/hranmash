@@ -1,17 +1,14 @@
-var modal = document.getElementById("modal-gallery-img");
-var img = document.querySelectorAll('.modal-gallery');
-var modalImg = document.getElementById("img01");
+//jshint esversion:6
 
-for (let i = 0; i < img.length; i++) {
-    img[i].onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
+let menuBar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.innerWidth > 991) {
+        menuBar.style.height = '56px';
+        if (window.scrollY >= 100) {
+            menuBar.style.height = '35px';
+        } else if (window.scrollY === 0) {
+            menuBar.style.height = '56px';
+        }
     }
-}
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function () {
-    modal.style.display = "none";
-}
-modal.onclick = function () {
-    modal.style.display = "none";
-}
+});

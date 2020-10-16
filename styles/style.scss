@@ -160,3 +160,11 @@ form {
 .carousel-caption {
   background-color: rgba(153, 153, 153, 0.45);
 }
+
+.navcontainer {
+  z-index: 2;
+}
+
+.navbar {
+  transition: height 0.5s !important;
+}

@@ -86,3 +86,11 @@ function plusSlide(num) {
 function closeModal() {
     document.querySelector('.modal').style.display = "none";
 }
+
+let modalWindow = document.querySelector('.modal');
+modalWindow.addEventListener('click', (e) => {
+    if (e.target == modalWindow) {
+        modalWindow.style.display = 'none';
+        //e.stopPropagation();
+    }
+});
