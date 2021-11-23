@@ -1,5 +1,8 @@
 //jshint esversion:6
 
+let date = new Date();
+let year = date.getFullYear();
+
 let footer = `<footer class="footer">
 <div class="container-fluid bg-light footer-info" style="border-top: 1px solid rgba(0,0,0,.1);">
     <div class="row justify-content-end">
@@ -16,8 +19,8 @@ let footer = `<footer class="footer">
     </div>
 </div>
 <div class="container-fluid bg-primary belt">
-    HRANMASH 2020 | Всички права запазени | Дизайн от PDD
+    HRANMASH ${year} | Всички права запазени | Дизайн от PDD
 </div>
 </footer>`;
 
-document.getElementById('footer').innerHTML = footer;
+document.getElementById("footer").innerHTML = footer;

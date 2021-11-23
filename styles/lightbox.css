@@ -18,7 +18,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 3;
+  z-index: 30;
   padding-top: 20px;
   left: 0;
   top: 0;
@@ -52,6 +52,7 @@
   right: 25px;
   font-size: 35px;
   font-weight: bold;
+  z-index: 99;
 }
 
 .close:hover,
@@ -85,6 +86,7 @@
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Position the "next button" to the right */

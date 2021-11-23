@@ -110,6 +110,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    margin-bottom: 380px;
+  }
+}
+
 th,
 tr {
   text-align: center;
@@ -172,11 +178,37 @@ form label a {
 }
 
 .navcontainer {
-  z-index: 2;
+  z-index: 20;
 }
 
 .navbar {
   -webkit-transition: height 0.5s !important;
   transition: height 0.5s !important;
+}
+
+.navbar-brand {
+  margin-right: 0.8rem;
+}
+
+.filtec-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.filtec-images img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  max-width: 24%;
+  height: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .filtec-images img {
+    max-width: 94%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

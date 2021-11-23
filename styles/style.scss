@@ -97,6 +97,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    margin-bottom: 380px;
+  }
+}
+
 th,
 tr {
   text-align: center;
@@ -116,7 +122,6 @@ td {
 }
 
 form {
-
   input,
   select,
   textarea {
@@ -162,9 +167,31 @@ form {
 }
 
 .navcontainer {
-  z-index: 2;
+  z-index: 20;
 }
 
 .navbar {
   transition: height 0.5s !important;
+}
+
+.navbar-brand {
+  margin-right: 0.8rem;
+}
+
+.filtec-images {
+  display: flex;
+  justify-content: space-evenly;
+  img {
+    object-fit: scale-down;
+    max-width: 24%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .filtec-images {
+    img {
+      max-width: 94%;
+    }
+  }
 }

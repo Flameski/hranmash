@@ -15,8 +15,10 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/lightbox.css" />
     <script src="/scripts/components.js" defer></script>
     <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/new-gallery.js" defer></script>
 </head>
 
 <body>
@@ -74,6 +76,36 @@
         <p>През годините в ХРАНМАШ сме били успешни и особено удовлетворени да участваме в някои по-големи проекти в
             индустрията, като:</p>
         <br>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h4>FILTEC</h4>
+            </div>
+            <div class="col-12 col-md-6">
+                <ul>
+                    <li>Преглед и оценка на съществуваща система за контрол на празни стъклени бутилки в 60 000 бут./час RGB производствена линия</li>
+                    <li>В сътрудничество и със съдействието на FILTEC проект и предложение на модернизация с нова система за контрол ASEBI (OMNIVISION 3 и VISIONTEC) да бъде доставена съгласно P2 и PD</li>
+                    <li>Доставка, интегриране и пуск на съгласувана нова напълно автоматична транспортна система за съществуваща 60 000 бут./час RGB производствена линия съгласно P2 и PD</li>
+                </ul>
+            </div>
+            <div class="filtec-images">
+                <img class="filtec-image" data-image="1" src="./images/filtec-1.jpg" alt="FILTEC">
+                <img class="filtec-image" data-image="2" src="./images/filtec-2.jpg" alt="FILTEC">
+                <img class="filtec-image" data-image="3" src="./images/filtec-3.jpg" alt="FILTEC">
+                <img class="filtec-image" data-image="4" src="./images/filtec-4.jpg" alt="FILTEC">
+            </div>
+            <!-- The Modal/Lightbox -->
+            <div class="modal">
+                <span class="close cursor">&times;</span>
+                <div class="modal-content">
+                    <div style="display: flex; align-items: center; height: 100vh;">
+                        <img id="modal-img" data-image="#" src="#" style="width: 100%;object-fit: contain;"></div>
+                        <!-- Next/previous controls -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+                    </div>
+                </div>
+        </div>
+        <hr>
         <div class="row">
             <div class="col-12 col-md-6">
                 <h4>Консолидирането на PEPSI-COLA/7-UP Кувейт</h4>
@@ -259,7 +291,6 @@
                 </ul>
             </div>
         </div>
-        <hr>
     </div>
     <!-- main content end -->
 
