@@ -30,10 +30,10 @@ function openModal() {
             thumbnailNum = 14;
             break;
         case 'projects':
-            thumbnailNum = 8;
+            thumbnailNum = 10;
             break;
         case 'diagram':
-            thumbnailNum = 5;
+            thumbnailNum = 7;
             break;
         default:
             break;
